@@ -6,26 +6,29 @@
 <script src="../dist/simplexture.development.js"></script>
 <script type="text/javascript">
   const canvas1 = document.querySelector('#canvas-1');
-  console.log(Simplexture);
-  const texture = Simplexture.Dot({
+
+  const texture = Simplexture.Dash({
     element: canvas1,
-    minRadius: 2,
-    maxRadius: 16,
-    padding: 6,
-    noise: { x: .1, y: .1, custom: .001 },
+    lineLength: 8,
+    padding: 16,
+    noise: { x: 0.01, y: 0.01, custom: 0.00025 },
     customValue: new Date().getTime(),
+    style: {
+      lineWidth: 2
+    },
     resize: true
   });
 
 
-  setInterval(() => {
-    texture.repaint({
-      customValue: new Date().getTime()
-    })
-  }, 60);
+
+    setInterval(() => {
+      texture.repaint({
+        customValue: new Date().getTime()
+      })
+    }, 60);
+
 
   /*
-
 
   */
 </script>
