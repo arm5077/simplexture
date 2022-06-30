@@ -1,20 +1,40 @@
+import SimplexNoise from 'simplex-noise';
 import {
-  PADDING_DEFAULT,
-  MIN_RADIUS_DEFAULT,
-  MAX_RADIUS_DEFAULT,
-  NOISE_DEFAULT,
-  STYLE_DEFAULT,
+  CUSTOM_VALUE_DEFAULT,
 } from 'Constants/Dot';
 
-const Dot = ({
-  seed = new Date().getTime(),
-  padding = PADDING_DEFAULT,
-  minRadius = MIN_RADIUS_DEFAULT,
-  maxRadius = MAX_RADIUS_DEFAULT,
-  noise = NOISE_DEFAULT,
-  style = STYLE_DEFAULT,
-}) => {
+import applyFunction from 'Common/apply';
+import makeBaseFunction from './base';
 
+const Dot = (opts = {}) => {
+  const {
+    element,
+    resize = false,
+    seed = new Date().getTime(),
+    customValue = CUSTOM_VALUE_DEFAULT,
+  } = opts;
+
+  if (!element) {
+    throw new Error('You must specify and element to attach the texture.');
+  }
+
+  const simplex = new SimplexNoise(seed);
+  const baseFunction = makeBaseFunction({ ...opts, simplex });
+
+  const {
+    repaint,
+    update,
+  } = applyFunction({
+    baseFunction,
+    customValue,
+    element,
+    resize,
+  });
+
+  return {
+    repaint,
+    update,
+  };
 };
 
 export default Dot;

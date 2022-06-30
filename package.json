@@ -25,6 +25,8 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
-    "@babel/preset-env": "^7.16.11"
+    "@babel/preset-env": "^7.16.11",
+    "d3-scale": "^4.0.2",
+    "simplex-noise": "^3.0.1"
   }
 }

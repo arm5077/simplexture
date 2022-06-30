@@ -1,0 +1,32 @@
+<html>
+<body>
+  <canvas id='canvas-1' style="width: 100%; height: 500px;"></canvas>
+</body>
+
+<script src="../dist/simplexture.development.js"></script>
+<script type="text/javascript">
+  const canvas1 = document.querySelector('#canvas-1');
+  const texture = Simplexture.Dot({
+    element: canvas1,
+    minRadius: 0,
+    maxRadius: 8,
+    noise: { x: 0.1, y: 0.1, custom: .001 },
+    customValue: new Date().getTime(),
+    resize: true
+  });
+
+
+
+    setInterval(() => {
+      texture.repaint({
+        customValue: new Date().getTime()
+      })
+    }, 60);
+
+
+  /*
+
+  */
+</script>
+
+</html>
