@@ -6,7 +6,6 @@
 <script src="../dist/simplexture.development.js"></script>
 <script type="text/javascript">
   const canvas1 = document.querySelector('#canvas-1');
-  console.log('sup');
   const texture = Simplexture.Wave({
     style: {
       lineWidth: 3
@@ -16,7 +15,7 @@
       y: .1,
       custom: 0,
     },
-    element: canvas1
+    target: canvas1
   });
 
   setInterval(() => {

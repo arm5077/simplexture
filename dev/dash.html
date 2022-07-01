@@ -8,7 +8,7 @@
   const canvas1 = document.querySelector('#canvas-1');
 
   const texture = Simplexture.Dash({
-    element: canvas1,
+    target: canvas1,
     lineLength: 8,
     padding: 16,
     noise: { x: 0.01, y: 0.01, custom: 0.00025 },
@@ -19,18 +19,12 @@
     resize: true
   });
 
-
-
     setInterval(() => {
       texture.repaint({
         customValue: new Date().getTime()
       })
     }, 60);
 
-
-  /*
-
-  */
 </script>
 
 </html>
