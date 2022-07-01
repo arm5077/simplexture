@@ -1,21 +1,21 @@
 const apply = ({
   baseFunction,
   customValue: initialCustomValue,
-  element,
+  target,
   resize,
 } = {}) => {
-  if (element.tagName !== 'CANVAS') {
-    throw new Error('Looks like you\'re trying to apply a texture to an element '
+  if (target.tagName !== 'CANVAS') {
+    throw new Error('Looks like you\'re trying to apply a texture to an target '
     + 'that isn\'t a <canvas>.');
   }
 
-  const ctx = element.getContext('2d');
+  const ctx = target.getContext('2d');
   let customValue = initialCustomValue;
   let height;
   let width;
 
   const getSize = () => {
-    const bbox = element.getBoundingClientRect();
+    const bbox = target.getBoundingClientRect();
     height = bbox.height;
     width = bbox.width;
     const scale = window.devicePixelRatio;

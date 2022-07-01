@@ -1,0 +1,10 @@
+export const SEGMENT_WIDTH_DEFAULT = 4;
+export const PADDING_DEFAULT = 24;
+export const MIN_HEIGHT_VARIATION_DEFAULT = -12;
+export const MAX_HEIGHT_VARIATION_DEFAULT = 12;
+export const NOISE_X_DEFAULT = 0.05;
+export const NOISE_Y_DEFAULT = 0.05;
+export const NOISE_CUSTOM_DEFAULT = 0;
+export const STYLE_DEFAULT_LINE_WIDTH = 2;
+export const STYLE_DEFAULT_LINE_CAP = 'round';
+export const STYLE_DEFAULT_STROKE_STYLE = 'black';
