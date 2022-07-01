@@ -46,6 +46,8 @@ To get it rolling, you'll just need a `Canvas` element.
 </script>
 ```
 
+([Codepen](https://codepen.io/pen/))
+
 This will fill the canvas object with a texture, using default values.
 
 How can you customize this? A few ways:
@@ -73,15 +75,15 @@ Let's try adding all of these together!
   const texture = Dot({
       target: canvas,
       minRadius: 4,
-      maxRadius: 6,
+      maxRadius: 12,
       padding: 2,
       style: {
-        fill: red,
+        fill: 'red',
       },
       noise: {
-        x: .01,
-        y: .01,
-        custom: .0001
+        x: .1,
+        y: .1,
+        custom: .0005
       },
       customValue: new Date().getTime(),
       resize: true,
@@ -91,9 +93,11 @@ Let's try adding all of these together!
     texture.repaint({
       customValue: new Date().getTime(),
     })
-  }, 100);
+  }, 50);
 </script>
 ```
+
+([Codepen](https://codepen.io/arm5077/pen/jOzPbVq))
 
 ## Background
 How does Simplexture and simplex noise work?
