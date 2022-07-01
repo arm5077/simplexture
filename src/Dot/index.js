@@ -5,7 +5,7 @@ import {
   MIN_RADIUS_DEFAULT,
   MAX_RADIUS_DEFAULT,
   NOISE_DEFAULT,
-  STYLE_DEFAULT,
+  STYLE_DEFAULT_FILL,
 } from 'Constants/Dot';
 
 const makeBaseFunction = ({
@@ -14,9 +14,9 @@ const makeBaseFunction = ({
   minRadius = MIN_RADIUS_DEFAULT,
   maxRadius = MAX_RADIUS_DEFAULT,
   noise = NOISE_DEFAULT,
-  style = STYLE_DEFAULT,
+  style = {},
 } = {}) => {
-  const { fill = 'black' } = style;
+  const { fill = STYLE_DEFAULT_FILL } = style;
   const radiusScale = scaleLinear()
     .domain([-1, 1])
     .range([minRadius, maxRadius]);

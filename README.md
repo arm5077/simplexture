@@ -5,13 +5,13 @@ Simplexture is a vanilla JavaScript library that uses [simplex noise](https://en
 ## Usage
 Simplexture can be imported as a module:
 
-```
+```js
 import { Dot, Dash } from 'simplexture';
 ```
 
 Or it can be used on an HTML page as a script.
 
-```
+```html
 <script src="http://unpkg.com/simplexture"></script>
 <script type="text/javascript">
   const { Dot, Dash } = Simplexture;
@@ -30,7 +30,7 @@ Simplexture isn't too complicated! It has a few functions that spin up specific 
 
 To get it rolling, you'll just need a `Canvas` element.
 
-```
+```html
 <script src="http://unpkg.com/simplexture"></script>
 
 <body>
@@ -62,7 +62,7 @@ How can you customize this? A few ways:
 
 Let's try adding all of these together!
 
-```
+```html
 <script src="http://unpkg.com/simplexture"></script>
 
 <body>

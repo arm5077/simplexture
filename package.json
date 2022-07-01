@@ -1,6 +1,6 @@
 {
   "name": "simplexture",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Create beautiful (and performant!) algorithmic textures on the fly.",
   "main": "./dist/simplexture.production.js",
   "scripts": {
